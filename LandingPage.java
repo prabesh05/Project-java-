@@ -184,19 +184,9 @@ public class LandingPage extends JFrame {
     private void playGame() {
         // Hide the landing page
         this.setVisible(false);
-        
-        // TODO: Replace this with your actual game initialization
-        JOptionPane.showMessageDialog(null, 
-            "Starting Football Shooting Game!\n\nReplace this with your actual game code.", 
-            "Game Starting", 
-            JOptionPane.INFORMATION_MESSAGE);
-        
-        // Example: Launch your main game class
-        // YourFootballGame game = new YourFootballGame();
-        // game.start();
-        
-        // For demo purposes, we'll show the landing page again
-        this.setVisible(true);
+
+        // Launch the actual game
+        Code.src.FootballShootingGame.main(new String[0]);
     }
     
     private void exitGame() {

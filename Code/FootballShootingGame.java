@@ -57,7 +57,7 @@ class GamePanel extends JPanel implements ActionListener {
     }
 
     private void setupUI() {
-        JLabel angleLabel = new JLabel("Angle (0-90°):");
+        JLabel angleLabel = new JLabel("Angle (1-90°):");
         JLabel powerLabel = new JLabel("Power (1-50):");
         
         angleLabel.setBounds(10, 10, 120, 20);
@@ -87,8 +87,8 @@ class GamePanel extends JPanel implements ActionListener {
                     int inputPower = Integer.parseInt(powerField.getText());
                     
                     // Strict validation with user feedback
-                    if (inputAngle < 0 || inputAngle > 90) {
-                        JOptionPane.showMessageDialog(this, "Angle must be between 0 and 90 degrees!");
+                    if (inputAngle <= 0 || inputAngle > 90) {
+                        JOptionPane.showMessageDialog(this, "Angle must be greater than 0 and less than 90 degrees!");
                         return;
                     }
                     if (inputPower < 1 || inputPower > 50) {

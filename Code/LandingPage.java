@@ -1,3 +1,5 @@
+package Code;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -186,7 +188,7 @@ public class LandingPage extends JFrame {
         this.setVisible(false);
 
         // Launch the actual game
-        Code.src.FootballShootingGame.main(new String[0]);
+        FootballShootingGame.main(new String[0]);
     }
     
     private void exitGame() {
